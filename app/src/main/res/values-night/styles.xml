@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Dark Theme -->
+    <style name="Theme_YourApp_Dark" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Dark theme customization -->
+        <item name="colorPrimary">@color/dark_primary</item>
+        <item name="colorSecondary">@color/dark_secondary</item>
+    </style>
+</resources>
