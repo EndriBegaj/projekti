@@ -5,5 +5,5 @@ data class Post(
     val id: Int,
     val title: String,
     val body: String,
-    val imageUrl: String  // Add the image URL here
+    val imageUrl: String
 )

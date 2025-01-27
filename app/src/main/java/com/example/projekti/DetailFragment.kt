@@ -16,24 +16,23 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         binding = FragmentDetailBinding.bind(view)
 
-        // Get the arguments passed from the HomeFragment
         val userId = arguments?.getInt("userId")
         val id = arguments?.getInt("id")
         val title = arguments?.getString("title")
         val body = arguments?.getString("body")
         val imageUrl = arguments?.getString("imageUrl")
 
-        // Set the data to your UI components
+
         binding.titleText.text = title
         binding.bodyText.text = body
 
-        // Check if the imageUrl is not empty or null
+
         if (!imageUrl.isNullOrEmpty()) {
-            // Load the image using Picasso
+
             Picasso.get().load(imageUrl).into(binding.imageView)
         } else {
-            // Use a placeholder image if imageUrl is empty or null
-            Picasso.get().load(R.drawable.baseline_photo_24).into(binding.imageView) // Replace with your actual placeholder image resource
+
+            Picasso.get().load(R.drawable.baseline_photo_24).into(binding.imageView)
         }
     }
 }

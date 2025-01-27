@@ -9,7 +9,7 @@ import com.squareup.picasso.Picasso
 
 class PostAdapter(
     private val posts: List<Post>,
-    private val onPostClick: (Post) -> Unit // Add a listener to handle clicks
+    private val onPostClick: (Post) -> Unit
 ) : RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
@@ -26,13 +26,13 @@ class PostAdapter(
 
     inner class PostViewHolder(private val binding: ItemPostBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(post: Post) {
-            binding.title.text = post.title      // Set title
-            binding.body.text = post.body        // Set body
-            Picasso.get().load(post.imageUrl).into(binding.imageView)  // Picasso for image loading
+            binding.title.text = post.title
+            binding.body.text = post.body
+            Picasso.get().load(post.imageUrl).into(binding.imageView)
 
-            // Set up the click listener
+
             binding.root.setOnClickListener {
-                onPostClick(post) // Trigger the click listener when the item is clicked
+                onPostClick(post)
             }
         }
     }

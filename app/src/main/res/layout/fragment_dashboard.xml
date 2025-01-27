@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <!-- Centered TextView for Dashboard Fragment -->
+
     <TextView
         android:id="@+id/text_dashboard"
         android:layout_width="match_parent"
